@@ -1,0 +1,37 @@
+import React from 'react';
+import { CheckCircle2, Clock, AlertCircle, XCircle, Truck, Package, RotateCcw, ShieldCheck } from 'lucide-react';
+
+interface StatusBadgeProps {
+  status: string;
+}
+
+export const StatusBadge: React.FC<StatusBadgeProps> = ({ status }) => {
+  const getBadgeStyle = (s: string) => {
+    const lower = s.toLowerCase();
+    if (['active', 'approved', 'delivered', 'paid', 'success', 'accepted'].includes(lower)) {
+      return { bg: 'bg-emerald-500/10 text-emerald-400 border-emerald-500/30', icon: CheckCircle2 };
+    }
+    if (['pending', 'placed', 'processing', 'created', 'pickup_scheduled', 'pending_review'].includes(lower)) {
+      return { bg: 'bg-amber-500/10 text-amber-400 border-amber-500/30', icon: Clock };
+    }
+    if (['shipped', 'in_transit', 'out_for_delivery', 'packed'].includes(lower)) {
+      return { bg: 'bg-blue-500/10 text-blue-400 border-blue-500/30', icon: Truck };
+    }
+    if (['cancelled', 'rejected', 'failed', 'blocked', 'rto'].includes(lower)) {
+      return { bg: 'bg-rose-500/10 text-rose-400 border-rose-500/30', icon: XCircle };
+    }
+    if (['returned', 'return_requested', 'disputed'].includes(lower)) {
+      return { bg: 'bg-purple-500/10 text-purple-400 border-purple-500/30', icon: RotateCcw };
+    }
+    return { bg: 'bg-slate-500/10 text-slate-400 border-slate-500/30', icon: AlertCircle };
+  };
+
+  const { bg, icon: Icon } = getBadgeStyle(status);
+
+  return (
+    <span className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium border ${bg}`}>
+      <Icon className="w-3.5 h-3.5" />
+      <span className="capitalize">{status.replace(/_/g, ' ')}</span>
+    </span>
+  );
+};

@@ -1,0 +1,848 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: "Times New Roman", Times, Georgia, serif;
+  }
+}
+
+/* Custom Accessibility & High Contrast / Theme adjustments */
+.high-contrast {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+.high-contrast * {
+  border-color: #ffffff !important;
+  color: #ffffff !important;
+  background-color: #000000 !important;
+}
+.high-contrast button {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  font-weight: bold !important;
+}
+
+/* ==========================================================================
+   STRICTLY ADMIN PANEL THEME: LIGHT LIGHT GREEN (#00C2AE & TINTS)
+   Based on user uploaded color card:
+   - Base Light Green: #ebf8f6
+   - Tint 1: #dff5f2
+   - Tint 2: #b6ede4
+   - Accent / Brand: #00C2AE (RGB 0 194 174)
+   - Deep readable adaptable text: #062b27 (AAA Contrast)
+   ========================================================================== */
+
+.admin-theme {
+  background-color: #ebf8f6 !important;
+  color: #08342f !important;
+}
+
+/* Base structural elements */
+.admin-theme aside {
+  background-color: #ddf5f0 !important;
+  border-color: #bce8df !important;
+}
+
+.admin-theme header {
+  background-color: #e6f8f5 !important;
+  border-color: #bce8df !important;
+}
+
+/* Major cards & surfaces */
+.admin-theme .bg-slate-950 {
+  background-color: #ffffff !important;
+  border-color: #c2ece5 !important;
+  color: #08342f !important;
+  box-shadow: 0 4px 20px -2px rgba(0, 194, 174, 0.07) !important;
+}
+
+.admin-theme .bg-slate-900 {
+  background-color: #e5f7f4 !important;
+  border-color: #c2ece5 !important;
+  color: #08342f !important;
+}
+
+.admin-theme .bg-slate-850,
+.admin-theme .bg-slate-800 {
+  background-color: #d1f4ee !important;
+  border-color: #b4e5dc !important;
+  color: #062b27 !important;
+}
+
+/* Borders */
+.admin-theme .border-slate-800,
+.admin-theme .border-slate-700,
+.admin-theme .border-slate-600 {
+  border-color: #c0ece4 !important;
+}
+
+.admin-theme hr {
+  border-color: #c0ece4 !important;
+}
+
+/* Adaptable Text Hierarchy (High Contrast AAA for Light Background) */
+.admin-theme .text-white {
+  color: #062b27 !important;
+}
+
+.admin-theme .text-slate-100,
+.admin-theme .text-slate-200 {
+  color: #0c3630 !important;
+}
+
+.admin-theme .text-slate-300 {
+  color: #174b43 !important;
+}
+
+.admin-theme .text-slate-400 {
+  color: #336961 !important;
+}
+
+.admin-theme .text-slate-500 {
+  color: #4d8078 !important;
+}
+
+/* Accent Buttons & Active States (#00C2AE) */
+.admin-theme .bg-violet-600,
+.admin-theme .bg-indigo-600 {
+  background-color: #00c2ae !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px 0 rgba(0, 194, 174, 0.28) !important;
+}
+
+.admin-theme .hover\:bg-violet-500:hover,
+.admin-theme .hover\:bg-indigo-500:hover {
+  background-color: #00aa99 !important;
+  color: #ffffff !important;
+}
+
+.admin-theme .text-violet-400,
+.admin-theme .text-violet-300,
+.admin-theme .text-indigo-400 {
+  color: #008778 !important;
+}
+
+.admin-theme .border-violet-500,
+.admin-theme .border-violet-500\/50,
+.admin-theme .border-violet-500\/30,
+.admin-theme .border-violet-600 {
+  border-color: #00c2ae !important;
+}
+
+.admin-theme .bg-violet-600\/20,
+.admin-theme .bg-violet-500\/20,
+.admin-theme .bg-violet-500\/25,
+.admin-theme .bg-violet-600\/15,
+.admin-theme .bg-violet-600\/10 {
+  background-color: #c8f5ee !important;
+  color: #007769 !important;
+}
+
+/* Hover States on Lists & Navigation */
+.admin-theme .hover\:bg-slate-900:hover {
+  background-color: #d6f5ef !important;
+  color: #062b27 !important;
+}
+
+.admin-theme .hover\:bg-slate-800:hover {
+  background-color: #c5efe7 !important;
+  color: #062b27 !important;
+}
+
+.admin-theme .hover\:bg-slate-700:hover {
+  background-color: #b5ebe1 !important;
+  color: #062b27 !important;
+}
+
+.admin-theme .hover\:bg-slate-900\/50:hover,
+.admin-theme .hover\:bg-slate-900\/40:hover,
+.admin-theme .hover\:bg-slate-900\/30:hover {
+  background-color: #daf6f1 !important;
+}
+
+/* Inputs, Textareas, and Dropdown Selects */
+.admin-theme input,
+.admin-theme textarea,
+.admin-theme select {
+  background-color: #ffffff !important;
+  color: #062b27 !important;
+  border: 1.5px solid #a8e6dd !important;
+}
+
+.admin-theme input::placeholder,
+.admin-theme textarea::placeholder {
+  color: #5c9289 !important;
+}
+
+.admin-theme input:focus,
+.admin-theme textarea:focus,
+.admin-theme select:focus {
+  border-color: #00c2ae !important;
+  outline: 2px solid rgba(0, 194, 174, 0.25) !important;
+}
+
+/* Tables & Dividers */
+.admin-theme table thead tr {
+  border-color: #bfe8e1 !important;
+  background-color: #daf5f0 !important;
+}
+
+.admin-theme table th {
+  color: #275d55 !important;
+  font-weight: 700 !important;
+}
+
+.admin-theme table td {
+  color: #062b27 !important;
+  border-color: #d1f4ee !important;
+}
+
+.admin-theme .divide-slate-800\/60 > * + * {
+  border-color: #d8f5ef !important;
+}
+
+/* Status Badges */
+.admin-theme .bg-emerald-500\/20 {
+  background-color: #c9f5ed !important;
+}
+.admin-theme .text-emerald-300,
+.admin-theme .text-emerald-400 {
+  color: #007769 !important;
+}
+
+.admin-theme .bg-amber-500\/20 {
+  background-color: #fef3c7 !important;
+}
+.admin-theme .text-amber-300,
+.admin-theme .text-amber-400 {
+  color: #92400e !important;
+}
+
+.admin-theme .bg-rose-500\/20 {
+  background-color: #fee2e2 !important;
+}
+.admin-theme .text-rose-300,
+.admin-theme .text-rose-400 {
+  color: #991b1b !important;
+}
+
+.admin-theme .bg-cyan-500\/20 {
+  background-color: #d0f8f4 !important;
+}
+.admin-theme .text-cyan-300,
+.admin-theme .text-cyan-400 {
+  color: #065986 !important;
+}
+
+/* Modals & Overlays inside Admin Panel */
+.admin-theme .fixed .bg-slate-950 {
+  background-color: #ffffff !important;
+  color: #062b27 !important;
+  border: 1.5px solid #a8e5dc !important;
+  box-shadow: 0 20px 40px -15px rgba(0, 194, 174, 0.2) !important;
+}
+
+.admin-theme .fixed .bg-slate-900\/50,
+.admin-theme .fixed .bg-slate-900 {
+  background-color: #e8f8f5 !important;
+  border-color: #c2ece5 !important;
+}
+
+/* ==========================================================================
+   STRICTLY DELIVERY PARTNER PANEL THEME: UNDER THE SEA (DEEP AQUAMARINE & BRIGHT AQUA CYAN)
+   Based on user uploaded UNDER THE SEA color card:
+   - Deep Tropical Aquamarine: #008f88 / #009688
+   - Luminous Bright Aqua Cyan: #00bcd4 / #06b6d4 (RGB 0 188 212)
+   - Soft Ocean Mist Base Background: #ebf9fa
+   - Crisp White Cards: #ffffff
+   - Deep Oceanic Readable Text: #032b31 (AAA Contrast)
+   ========================================================================== */
+
+.delivery-theme {
+  background-color: #ebf9fa !important;
+  color: #053b44 !important;
+}
+
+/* Base structural elements */
+.delivery-theme aside {
+  background-color: #d4f3f6 !important;
+  border-color: #9ee4ec !important;
+}
+
+.delivery-theme header {
+  background-color: #dcf6f8 !important;
+  border-color: #9ee4ec !important;
+}
+
+/* Major cards & surfaces */
+.delivery-theme .bg-slate-950 {
+  background-color: #ffffff !important;
+  border-color: #b2eaf0 !important;
+  color: #053b44 !important;
+  box-shadow: 0 4px 20px -2px rgba(0, 188, 212, 0.08) !important;
+}
+
+.delivery-theme .bg-slate-900 {
+  background-color: #def5f7 !important;
+  border-color: #b2eaf0 !important;
+  color: #053b44 !important;
+}
+
+.delivery-theme .bg-slate-850,
+.delivery-theme .bg-slate-800 {
+  background-color: #c8eff3 !important;
+  border-color: #9fe2ea !important;
+  color: #032a31 !important;
+}
+
+/* Borders */
+.delivery-theme .border-slate-800,
+.delivery-theme .border-slate-700,
+.delivery-theme .border-slate-600 {
+  border-color: #a7e6ed !important;
+}
+
+.delivery-theme hr {
+  border-color: #a7e6ed !important;
+}
+
+/* Adaptable Text Hierarchy (High Contrast AAA for Light Background) */
+.delivery-theme .text-white {
+  color: #032b31 !important;
+}
+
+.delivery-theme .text-slate-100,
+.delivery-theme .text-slate-200 {
+  color: #053b44 !important;
+}
+
+.delivery-theme .text-slate-300 {
+  color: #074b55 !important;
+}
+
+.delivery-theme .text-slate-400 {
+  color: #0d6b79 !important;
+}
+
+.delivery-theme .text-slate-500 {
+  color: #178393 !important;
+}
+
+/* Accent Buttons & Active States (UNDER THE SEA: Aquamarine to Bright Aqua) */
+.delivery-theme .bg-amber-600,
+.delivery-theme .bg-amber-500,
+.delivery-theme .bg-violet-600 {
+  background: linear-gradient(135deg, #008f88 0%, #00bcd4 100%) !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px 0 rgba(0, 188, 212, 0.35) !important;
+}
+
+.delivery-theme .hover\:bg-amber-500:hover,
+.delivery-theme .hover\:bg-amber-600:hover,
+.delivery-theme .hover\:bg-violet-500:hover {
+  background: linear-gradient(135deg, #007a74 0%, #00a8be 100%) !important;
+  color: #ffffff !important;
+}
+
+.delivery-theme .text-amber-400,
+.delivery-theme .text-amber-500,
+.delivery-theme .text-amber-300,
+.delivery-theme .text-violet-400 {
+  color: #008f88 !important;
+}
+
+.delivery-theme .border-amber-500,
+.delivery-theme .border-amber-500\/50,
+.delivery-theme .border-amber-500\/30,
+.delivery-theme .border-amber-600 {
+  border-color: #00bcd4 !important;
+}
+
+.delivery-theme .bg-amber-500\/10,
+.delivery-theme .bg-amber-500\/20,
+.delivery-theme .bg-amber-600\/20 {
+  background-color: #cbf3f7 !important;
+  color: #007a74 !important;
+}
+
+/* Hover States on Lists & Navigation */
+.delivery-theme .hover\:bg-slate-900:hover {
+  background-color: #d1f2f6 !important;
+  color: #032b31 !important;
+}
+
+.delivery-theme .hover\:bg-slate-800:hover {
+  background-color: #c2edf2 !important;
+  color: #032b31 !important;
+}
+
+.delivery-theme .hover\:bg-slate-700:hover {
+  background-color: #b5e7ec !important;
+  color: #032b31 !important;
+}
+
+.delivery-theme .hover\:bg-slate-900\/50:hover,
+.delivery-theme .hover\:bg-slate-900\/40:hover,
+.delivery-theme .hover\:bg-slate-900\/30:hover {
+  background-color: #d8f5f8 !important;
+}
+
+/* Inputs, Textareas, and Dropdown Selects */
+.delivery-theme input,
+.delivery-theme textarea,
+.delivery-theme select {
+  background-color: #ffffff !important;
+  color: #032b31 !important;
+  border: 1.5px solid #a7e6ed !important;
+}
+
+.delivery-theme input::placeholder,
+.delivery-theme textarea::placeholder {
+  color: #5aa4af !important;
+}
+
+.delivery-theme input:focus,
+.delivery-theme textarea:focus,
+.delivery-theme select:focus {
+  border-color: #00bcd4 !important;
+  outline: 2px solid rgba(0, 188, 212, 0.25) !important;
+}
+
+/* Tables & Dividers */
+.delivery-theme table thead tr {
+  border-color: #a7e6ed !important;
+  background-color: #d0f3f6 !important;
+}
+
+.delivery-theme table th {
+  color: #074b55 !important;
+  font-weight: 700 !important;
+}
+
+.delivery-theme table td {
+  color: #032b31 !important;
+  border-color: #dcf6f8 !important;
+}
+
+.delivery-theme .divide-slate-800\/60 > * + * {
+  border-color: #a7e6ed !important;
+}
+
+/* Modals & Overlays inside Delivery Panel */
+.delivery-theme .fixed .bg-slate-950 {
+  background-color: #ffffff !important;
+  color: #032b31 !important;
+  border: 1.5px solid #9fe2ea !important;
+  box-shadow: 0 20px 40px -15px rgba(0, 188, 212, 0.2) !important;
+}
+
+.delivery-theme .fixed .bg-slate-900\/50,
+.delivery-theme .fixed .bg-slate-900 {
+  background-color: #dcf6f8 !important;
+  border-color: #b2eaf0 !important;
+}
+
+/* ==========================================================================
+   STRICTLY SELLER DASHBOARD THEME: NAUTICAL (DEEP SLATE NAVY & TURQUOISE TEAL)
+   Based on user uploaded NAUTICAL color card:
+   - Primary Deep Nautical Slate: #182635 / #1b2836
+   - Primary Nautical Seafoam / Turquoise Teal: #14b8a6 (RGB 20 184 166)
+   - Highlight Mint: #2dd4bf
+   - Dark Slate Borders: #26394d
+   ========================================================================== */
+
+.seller-theme {
+  background-color: #15212d !important;
+  color: #f1f5f9 !important;
+}
+
+/* Base structural elements */
+.seller-theme aside {
+  background-color: #101923 !important;
+  border-color: #233446 !important;
+}
+
+.seller-theme header {
+  background-color: #14202c !important;
+  border-color: #233446 !important;
+}
+
+/* Major cards & surfaces */
+.seller-theme .bg-slate-950 {
+  background-color: #172433 !important;
+  border-color: #26394e !important;
+  color: #f1f5f9 !important;
+  box-shadow: 0 4px 20px -2px rgba(20, 184, 166, 0.08) !important;
+}
+
+.seller-theme .bg-slate-900 {
+  background-color: #1d2d3e !important;
+  border-color: #26394e !important;
+  color: #f1f5f9 !important;
+}
+
+.seller-theme .bg-slate-850,
+.seller-theme .bg-slate-800 {
+  background-color: #23374c !important;
+  border-color: #314a64 !important;
+  color: #ffffff !important;
+}
+
+/* Borders */
+.seller-theme .border-slate-800,
+.seller-theme .border-slate-700,
+.seller-theme .border-slate-600 {
+  border-color: #26394e !important;
+}
+
+.seller-theme hr {
+  border-color: #26394e !important;
+}
+
+/* Typography */
+.seller-theme .text-white {
+  color: #ffffff !important;
+}
+
+.seller-theme .text-slate-100,
+.seller-theme .text-slate-200 {
+  color: #f1f5f9 !important;
+}
+
+.seller-theme .text-slate-300 {
+  color: #cbd5e1 !important;
+}
+
+.seller-theme .text-slate-400 {
+  color: #94a3b8 !important;
+}
+
+.seller-theme .text-slate-500 {
+  color: #64748b !important;
+}
+
+/* Brand Accent Buttons & Active States (Nautical Seafoam Turquoise #14b8a6) */
+.seller-theme .bg-emerald-600,
+.seller-theme .bg-emerald-500,
+.seller-theme .bg-violet-600,
+.seller-theme .bg-indigo-600,
+.seller-theme .bg-amber-600 {
+  background-color: #14b8a6 !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px 0 rgba(20, 184, 166, 0.35) !important;
+}
+
+.seller-theme .hover\:bg-emerald-500:hover,
+.seller-theme .hover\:bg-emerald-600:hover,
+.seller-theme .hover\:bg-violet-500:hover,
+.seller-theme .hover\:bg-amber-500:hover {
+  background-color: #0d9488 !important;
+  color: #ffffff !important;
+}
+
+.seller-theme .text-emerald-400,
+.seller-theme .text-emerald-300,
+.seller-theme .text-teal-400,
+.seller-theme .text-violet-400 {
+  color: #2dd4bf !important;
+}
+
+.seller-theme .border-emerald-500,
+.seller-theme .border-emerald-500\/50,
+.seller-theme .border-emerald-500\/30,
+.seller-theme .border-emerald-600 {
+  border-color: #14b8a6 !important;
+}
+
+.seller-theme .bg-emerald-500\/10,
+.seller-theme .bg-emerald-500\/20,
+.seller-theme .bg-emerald-600\/20 {
+  background-color: rgba(20, 184, 166, 0.18) !important;
+  color: #5eead4 !important;
+}
+
+/* Hover States on Lists & Navigation */
+.seller-theme .hover\:bg-slate-900:hover {
+  background-color: #213245 !important;
+  color: #ffffff !important;
+}
+
+.seller-theme .hover\:bg-slate-800:hover {
+  background-color: #283d54 !important;
+  color: #ffffff !important;
+}
+
+.seller-theme .hover\:bg-slate-700:hover {
+  background-color: #314b67 !important;
+  color: #ffffff !important;
+}
+
+.seller-theme .hover\:bg-slate-900\/50:hover,
+.seller-theme .hover\:bg-slate-900\/40:hover,
+.seller-theme .hover\:bg-slate-900\/30:hover {
+  background-color: rgba(29, 45, 62, 0.6) !important;
+}
+
+/* Inputs, Textareas, and Dropdown Selects */
+.seller-theme input,
+.seller-theme textarea,
+.seller-theme select {
+  background-color: #131e2b !important;
+  color: #ffffff !important;
+  border: 1px solid #2b4056 !important;
+}
+
+.seller-theme input::placeholder,
+.seller-theme textarea::placeholder {
+  color: #64748b !important;
+}
+
+.seller-theme input:focus,
+.seller-theme textarea:focus,
+.seller-theme select:focus {
+  border-color: #14b8a6 !important;
+  outline: 2px solid rgba(20, 184, 166, 0.25) !important;
+}
+
+/* Tables & Dividers */
+.seller-theme table thead tr {
+  border-color: #26394e !important;
+  background-color: #121c27 !important;
+}
+
+.seller-theme table th {
+  color: #94a3b8 !important;
+  font-weight: 700 !important;
+}
+
+.seller-theme table td {
+  color: #f1f5f9 !important;
+  border-color: #202f40 !important;
+}
+
+.seller-theme .divide-slate-800\/60 > * + * {
+  border-color: #233446 !important;
+}
+
+/* Modals & Overlays inside Seller Dashboard */
+.seller-theme .fixed .bg-slate-950 {
+  background-color: #172433 !important;
+  color: #ffffff !important;
+  border: 1.5px solid #2b4056 !important;
+  box-shadow: 0 20px 40px -15px rgba(20, 184, 166, 0.2) !important;
+}
+
+.seller-theme .fixed .bg-slate-900\/50,
+.seller-theme .fixed .bg-slate-900 {
+  background-color: #1d2d3e !important;
+  border-color: #26394e !important;
+}
+
+/* ==========================================================================
+   STRICTLY CUSTOMER PORTAL THEME: MULBERRY PLUM (#5F2245) & BERRY ROSE (#913556)
+   Based on user uploaded color card:
+   - Deep Royal Mulberry Plum: #5F2245 (RGB 95 34 69)
+   - Vibrant Berry Rose: #913556 (RGB 145 53 86)
+   - Sunset Coral Accent: #e85d43
+   - Soft Berry Cream Base Background: #fcf5f8
+   - Deep Mulberry Text: #3b1227 (AAA Contrast)
+   ========================================================================== */
+
+.customer-theme {
+  background-color: #fcf5f8 !important;
+  color: #3b1227 !important;
+}
+
+/* Base structural elements */
+.customer-theme aside {
+  background-color: #f7e8ef !important;
+  border-color: #ebd0de !important;
+}
+
+.customer-theme header {
+  background-color: #faecf2 !important;
+  border-color: #ebd0de !important;
+}
+
+/* Major cards & surfaces */
+.customer-theme .bg-slate-950 {
+  background-color: #ffffff !important;
+  border-color: #ecd5e0 !important;
+  color: #3b1227 !important;
+  box-shadow: 0 4px 20px -2px rgba(145, 53, 86, 0.08) !important;
+}
+
+.customer-theme .bg-slate-900 {
+  background-color: #f9edf3 !important;
+  border-color: #ebd0de !important;
+  color: #3b1227 !important;
+}
+
+.customer-theme .bg-slate-850,
+.customer-theme .bg-slate-800 {
+  background-color: #f3deea !important;
+  border-color: #e4bfd2 !important;
+  color: #2e0c1e !important;
+}
+
+/* Borders */
+.customer-theme .border-slate-800,
+.customer-theme .border-slate-700,
+.customer-theme .border-slate-600 {
+  border-color: #ebd0de !important;
+}
+
+.customer-theme hr {
+  border-color: #ebd0de !important;
+}
+
+/* Adaptable Text Hierarchy (High Contrast AAA for Light Background) */
+.customer-theme .text-white {
+  color: #3b1227 !important;
+}
+
+.customer-theme .text-slate-100,
+.customer-theme .text-slate-200 {
+  color: #4a1b34 !important;
+}
+
+.customer-theme .text-slate-300 {
+  color: #6e2d50 !important;
+}
+
+.customer-theme .text-slate-400 {
+  color: #8f426b !important;
+}
+
+.customer-theme .text-slate-500 {
+  color: #a45a82 !important;
+}
+
+/* Accent Buttons & Active States (Mulberry #5F2245 to Berry #913556) */
+.customer-theme .bg-indigo-600,
+.customer-theme .bg-indigo-500,
+.customer-theme .bg-violet-600,
+.customer-theme .bg-emerald-600,
+.customer-theme .bg-amber-600 {
+  background: linear-gradient(135deg, #913556 0%, #5F2245 100%) !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px 0 rgba(145, 53, 86, 0.35) !important;
+}
+
+.customer-theme .hover\:bg-indigo-500:hover,
+.customer-theme .hover\:bg-indigo-600:hover,
+.customer-theme .hover\:bg-violet-500:hover {
+  background: linear-gradient(135deg, #a64266 0%, #702b53 100%) !important;
+  color: #ffffff !important;
+}
+
+.customer-theme .text-indigo-400,
+.customer-theme .text-indigo-300,
+.customer-theme .text-violet-400 {
+  color: #913556 !important;
+}
+
+.customer-theme .border-indigo-500,
+.customer-theme .border-indigo-500\/50,
+.customer-theme .border-indigo-500\/30 {
+  border-color: #913556 !important;
+}
+
+.customer-theme .bg-indigo-500\/10,
+.customer-theme .bg-indigo-500\/20,
+.customer-theme .bg-rose-500\/10 {
+  background-color: #f6e2ed !important;
+  color: #5F2245 !important;
+}
+
+/* Cart Counter & Urgent Alert Badges (Sunset Coral #e85d43) */
+.customer-theme .bg-rose-500,
+.customer-theme .bg-rose-600 {
+  background-color: #e85d43 !important;
+  color: #ffffff !important;
+}
+
+.customer-theme .text-rose-400,
+.customer-theme .text-rose-500 {
+  color: #e85d43 !important;
+}
+
+/* Hover States on Lists & Navigation */
+.customer-theme .hover\:bg-slate-900:hover {
+  background-color: #f4e2ec !important;
+  color: #3b1227 !important;
+}
+
+.customer-theme .hover\:bg-slate-800:hover {
+  background-color: #ebd3e2 !important;
+  color: #3b1227 !important;
+}
+
+.customer-theme .hover\:bg-slate-700:hover {
+  background-color: #e2c5d7 !important;
+  color: #3b1227 !important;
+}
+
+.customer-theme .hover\:bg-slate-900\/50:hover,
+.customer-theme .hover\:bg-slate-900\/40:hover,
+.customer-theme .hover\:bg-slate-900\/30:hover {
+  background-color: #f6e5ef !important;
+}
+
+/* Inputs, Textareas, and Dropdown Selects */
+.customer-theme input,
+.customer-theme textarea,
+.customer-theme select {
+  background-color: #ffffff !important;
+  color: #3b1227 !important;
+  border: 1.5px solid #ebd0de !important;
+}
+
+.customer-theme input::placeholder,
+.customer-theme textarea::placeholder {
+  color: #a45a82 !important;
+}
+
+.customer-theme input:focus,
+.customer-theme textarea:focus,
+.customer-theme select:focus {
+  border-color: #913556 !important;
+  outline: 2px solid rgba(145, 53, 86, 0.25) !important;
+}
+
+/* Tables & Dividers */
+.customer-theme table thead tr {
+  border-color: #ebd0de !important;
+  background-color: #f4e2ec !important;
+}
+
+.customer-theme table th {
+  color: #5F2245 !important;
+  font-weight: 700 !important;
+}
+
+.customer-theme table td {
+  color: #3b1227 !important;
+  border-color: #faedf3 !important;
+}
+
+.customer-theme .divide-slate-800\/60 > * + * {
+  border-color: #ebd0de !important;
+}
+
+/* Modals & Overlays inside Customer Portal */
+.customer-theme .fixed .bg-slate-950 {
+  background-color: #ffffff !important;
+  color: #3b1227 !important;
+  border: 1.5px solid #e4bfd2 !important;
+  box-shadow: 0 20px 40px -15px rgba(95, 34, 69, 0.2) !important;
+}
+
+.customer-theme .fixed .bg-slate-900\/50,
+.customer-theme .fixed .bg-slate-900 {
+  background-color: #faecf2 !important;
+  border-color: #ebd0de !important;
+}
+
+
+
