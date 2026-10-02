@@ -1,0 +1,8 @@
+com\ecommerce\marketplace\settings\service\CommissionResolverTest.class
+com\ecommerce\marketplace\inventory\InventoryServiceTest.class
+com\ecommerce\marketplace\auth\AuthServiceTest.class
+com\ecommerce\marketplace\inventory\service\InventoryConcurrencyTest.class
+com\ecommerce\marketplace\seller\service\KycGateTest.class
+com\ecommerce\marketplace\cart\CartServiceTest.class
+com\ecommerce\marketplace\security\SecurityTestUtils.class
+com\ecommerce\marketplace\auth\AuthControllerTest.class
